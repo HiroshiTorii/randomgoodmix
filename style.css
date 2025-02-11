@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#random-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 画像間のスペース */
+    flex-wrap: wrap; /* 画面幅に合わせて折り返しを可能にする */
+}
+
+.image-item {
+    position: relative;
+    display: inline-block;
+    width: calc(100% / 7 - 20px); /* 画像が7つ並ぶように調整 */
+    height: auto;
+}
+
+.image-background {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background-color: inherit; /* 親の背景色を継承 */
+    z-index: -1; /* 背景を画像の後ろに表示 */
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 14px;
+}
